@@ -1,0 +1,50 @@
+#cuntries {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.country-sec {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#country-flied {
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+.search-button {
+    margin-top: 50px;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+.cuntry {
+    border: 2px solid rebeccapurple;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+.cuntry p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.cuntry:hover {
+    background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: white;
+
+}
+
+.cuntry h3 {
+    color: rgb(177, 34, 165);
+}
+#country-deatils {
+    background-color: aquamarine;
+    padding-left: 10px;
+    border-radius: 10px;
+    width: 500px;
+    
+}

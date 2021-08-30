@@ -5,15 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuntries</title>
-    <link rel="stylesheet" href="cuntry.css">
+    <link rel="stylesheet" href="css/cuntry.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
-<body>
-    <section>
-        <h3>Country deatils</h3>
-        <div id="country-deatils"></div>
+<body class="container">
+    <section class="country-sec">
+        <div>
+            <h3 class="">Country deatils</h3>
+            <div id="country-deatils"></div>
+        </div>
+        <div>
+            <input id="country-flied" type="text">
+            <button class="search-button" onclick="searchCountry()">Search</button>
+        </div>
     </section>
     <h1>Cuntries</h1>
     <div id="cuntries"></div>
-    <script src="cuntries.js"></script>
+    <script src="js/cuntries.js"></script>
 </body>
 </html>

@@ -20,8 +20,8 @@ cuntries.forEach(country => {
     div.classList.add('cuntry')
     div.innerHTML = `
      <h3>${country.name}</h3>
-     <p>${country.capital}</p>
-     <button onclick="loadCountryByNmae('${country.name}')">Details</button>
+     <p>Capital: ${country.capital}</p>
+     <button onclick="loadCountryByName('${country.name}')">Details</button>
 
     `
 
@@ -37,7 +37,20 @@ cuntries.forEach(country => {
 
 }
 
-const loadCountryByNmae = name =>{
+const searchCountry = () => {
+    const searchField = document.getElementById('country-flied')
+    const searchText = searchField.value;
+    searchField.value = '';
+    console.log(searchText);
+   const full =`https://restcountries.eu/rest/v2/name/${searchText}?fullText=true`
+    fetch(full)
+    .then(res => res.json())
+    .then( data =>displayCountriesDeatils(data[0]))
+    }
+
+
+
+const  loadCountryByName= name =>{
     const url = `https://restcountries.eu/rest/v2/name/${name}`
     fetch(url)
     .then(res => res.json())
@@ -48,12 +61,14 @@ const loadCountryByNmae = name =>{
 const displayCountriesDeatils = country => {
     const countryDiv =document.getElementById('country-deatils');
     countryDiv.innerHTML = `
-    <h4>Country: ${country.name}</h4>
+    <h6>Country: ${country.name}</h6>
     <p>Population: ${country.population}</p>
     <p>Subregion: ${country.subregion}</p>
+    <p>Area: ${country.area}</p>
+    <p>Number Code: ${country.numericCode}</p>
     <img width="200px" src="${country.flag}">
     `
-    const p = document.
-console.log(country);
+    
+// console.log(country);
 }
 // arra
